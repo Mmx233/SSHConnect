@@ -18,7 +18,7 @@ func main() {
 	var resolve = flag.Bool("R", false, "resolve host to ip")
 	flag.Parse()
 	if len(flag.Args()) < 2 || *socks5Addr == "" {
-		log.Fatalln("Usage: connect -S user@proxy:port <host> <port>")
+		log.Fatalln("Usage: connect -S user@proxy:port [-R] <host> <port>")
 	}
 
 	host := flag.Args()[0]
